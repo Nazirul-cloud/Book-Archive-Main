@@ -1,4 +1,4 @@
-// book search
+// Book search
 const searchBook = () => {
     let searchField = document.getElementById('search-field');
     let searchText = searchField.value;
@@ -9,7 +9,7 @@ const searchBook = () => {
         .then(data => displayBookResult(data.docs.slice(0, 20)));
 };
 
-// book display
+// Book display
 const displayBookResult = docs => {
     const searchResult = document.getElementById('search-result');
     docs.forEach(doc => {
@@ -31,7 +31,7 @@ const displayBookResult = docs => {
 };
 
 
-// for total search result
+// total search result
 const searchTotalResult = () => {
     let searchField = document.getElementById('search-field');
     let searchText = searchField.value;
@@ -42,7 +42,7 @@ const searchTotalResult = () => {
         .then(data => displayTotalResult(data.numFound));
 };
 
-// for display results and no results 
+//  results and no result 
 const displayTotalResult = nums => {
     let result = nums;
     let totalFound = document.getElementById('total-found');
